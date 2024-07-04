@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Detect FB Fakelink",
+  "version": "1.0",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+          }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+   
+  }
+}

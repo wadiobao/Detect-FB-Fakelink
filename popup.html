@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>URL Analyzer</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+    #result {
+      margin-top: 10px;
+    }
+    #decodedUrl, #apiResult, #apiDetails {
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h1>URL Analyzer</h1>
+  <input type="text" id="urlInput" placeholder="Enter URL here" />
+  <button id="analyzeButton">Analyze URL</button>
+  <p id="decodedUrl"></p> <!-- Hiển thị URL đã giải mã -->
+  <p id="result"></p> <!-- Hiển thị đích đến cuối cùng của URL -->
+  <p id="apiResult"></p> <!-- Hiển thị kết quả từ API -->
+  <div id="apiDetails"></div> <!-- Hiển thị thông tin chi tiết từ API -->
+  <script src="popup.js"></script>
+	<script src="content.js"></script>
+</body>
+</html>
